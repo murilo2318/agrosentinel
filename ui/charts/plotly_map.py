@@ -113,7 +113,7 @@ def render_choropleth_map(
             oceancolor="#0F1117",
             showcoastlines=True,
             coastlinecolor="#2A2E40",
-            showborder=True,
+            showframe=True,
             bgcolor="rgba(0,0,0,0)",
         )
 
