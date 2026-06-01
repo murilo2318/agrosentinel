@@ -112,15 +112,6 @@ streamlit run app.py
 
 ---
 
-## Deploy no Streamlit Cloud
-
-1. Faça fork/push do repositório para o GitHub
-2. Acesse [share.streamlit.io](https://share.streamlit.io)
-3. Conecte o repositório e selecione `app.py` como entrypoint
-4. Clique em **Deploy** — o Streamlit Cloud instala o `requirements.txt` automaticamente
-
----
-
 ## Fontes de dados
 
 | Fonte | Dados | Status |
