@@ -95,7 +95,7 @@ O modelo é treinado automaticamente na inicialização e cacheado com `@st.cach
 
 ```bash
 # Clone o repositório
-git clone https://github.com/SEU_USUARIO/agrosentinel.git
+git clone https://github.com/murilo2318/agrosentinel.git
 cd agrosentinel
 
 # Crie e ative um ambiente virtual
@@ -109,8 +109,6 @@ pip install -r requirements.txt
 # Execute o dashboard
 streamlit run app.py
 ```
-
-O app estará disponível em `http://localhost:8501`.
 
 ---
 
