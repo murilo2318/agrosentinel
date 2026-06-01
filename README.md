@@ -6,7 +6,7 @@ Desenvolvido como Global Solution 2026/1 — Disciplina de Front-End & Mobile De
 
 ---
 
-## 🎯 O Problema
+## O Problema
 
 Eventos climáticos extremos, secas prolongadas e queimadas impõem perdas bilionárias à agricultura brasileira anualmente. Gestores rurais, Defesa Civil e órgãos ambientais precisam de informação acionável em tempo real — não de planilhas estáticas ou relatórios atrasados.
 
@@ -14,7 +14,7 @@ O AgroSentinel cruza **três fontes de dados** (focos de queimada INPE, dados cl
 
 ---
 
-## 🏗️ Arquitetura
+## Arquitetura
 
 ```
 agrosentinel/
@@ -52,7 +52,7 @@ agrosentinel/
 
 ---
 
-## 🤖 Modelo de Machine Learning
+## Modelo de Machine Learning
 
 **Algoritmo:** `RandomForestClassifier` (scikit-learn)
 
@@ -74,7 +74,7 @@ O modelo é treinado automaticamente na inicialização e cacheado com `@st.cach
 
 ---
 
-## ✅ Requisitos técnicos atendidos
+## Requisitos técnicos atendidos
 
 | Requisito | Implementação |
 |---|---|
@@ -91,7 +91,7 @@ O modelo é treinado automaticamente na inicialização e cacheado com `@st.cach
 
 ---
 
-## 🚀 Instalação e execução
+## Instalação e execução
 
 ```bash
 # Clone o repositório
@@ -114,7 +114,7 @@ O app estará disponível em `http://localhost:8501`.
 
 ---
 
-## ☁️ Deploy no Streamlit Cloud
+## Deploy no Streamlit Cloud
 
 1. Faça fork/push do repositório para o GitHub
 2. Acesse [share.streamlit.io](https://share.streamlit.io)
@@ -123,7 +123,7 @@ O app estará disponível em `http://localhost:8501`.
 
 ---
 
-## 📊 Fontes de dados
+## Fontes de dados
 
 | Fonte | Dados | Status |
 |---|---|---|
@@ -135,12 +135,12 @@ Em produção, substituir os providers simulados pelas APIs reais das fontes aci
 
 ---
 
-## 👥 Grupo
+## Grupo
 
 | Nome | RM |
 |---|---|
-| [NOME 1] | [RM] |
-| [NOME 2] | [RM] |
-| [NOME 3] | [RM] |
+| [Luis Fernando de Oliveira Salgado] | [561401] |
+| [Nicolas Lemos Ribeiro] | [553273] |
+| [Murilo de Faria Benhossi] | [562358] |
 
-**FIAP — Tecnólogo em Inteligência Artificial — 2TIAPF — Global Solution 2026/1**
+**FIAP — Inteligência Artificial — 2TIAPF — Global Solution**
