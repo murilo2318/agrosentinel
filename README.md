@@ -13,6 +13,21 @@ Eventos climáticos extremos, secas prolongadas e queimadas impõem perdas bilio
 O AgroSentinel cruza **três fontes de dados** (focos de queimada INPE, dados climáticos Open-Meteo e índice de vegetação NDVI via Sentinel-2) e aplica um **modelo de Machine Learning** para calcular um **Índice de Risco Agroclimático** por estado brasileiro, guiando o usuário do panorama nacional até a decisão de envio de alertas.
 
 ---
+## Justificativa de Framework
+
+Escolhemos o **Streamlit** em detrimento do Gradio pelas seguintes razões:
+
+**1. Controle de estado granular** — o `st.session_state` permite gerenciar com precisão o ciclo de rerun, separando estado de filtros, dados carregados e decisões HITL em módulos distintos (`state/session.py`, `state/filters.py`, `state/alerts.py`). O Gradio exigiria um esforço maior para replicar esse nível de controle sem acoplamento.
+
+**2. Layouts complexos nativos** — tabs, colunas, sidebar e expanders são primitivas nativas do Streamlit, essenciais para o storytelling de dados do AgroSentinel (panorama → detalhe → decisão). No Gradio, composições assim exigem código mais verboso com `gr.Blocks`.
+
+**3. Cache em duas camadas** — `@st.cache_data` (dados dos providers, TTL de 1h) e `@st.cache_resource` (modelo RandomForest, sem expiração) cobrem exatamente os dois casos de uso do projeto: dados mutáveis e recurso computacionalmente caro treinado uma única vez.
+
+**4. Integração com Plotly** — o Streamlit renderiza figuras Plotly com `st.plotly_chart` de forma nativa, com suporte completo a hover, zoom e interatividade, essenciais para o mapa coroplético e as séries temporais do dashboard.
+
+**5. Deploy trivial** — o Streamlit Cloud lê o `requirements.txt` e faz deploy direto do GitHub sem configuração adicional, o que simplifica a entrega e a demonstração pública do projeto.
+
+---
 
 ## Arquitetura
 
